@@ -6,9 +6,8 @@
 }
 
 body {
-  /*background-color: #ddd;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.6em;
-  /*padding-top: 50px;*/
 }
 
 .navlogo {
@@ -19,10 +18,6 @@ body {
   font-size: 16px;
 }
 
-/*.about_blurb {
-  margin: 2em 0;
-}*/
-
 .parallax {
   background-attachment: fixed;
   background-size: auto auto;
@@ -31,14 +26,9 @@ body {
 
 .banner {
   color: white;
-  padding-top: 2.5em;
+  padding-top: 2em;
   padding-bottom: 14rem;
   margin-bottom: 0;
-}
-
-.banner.short h1{
-
-  /*margin-top: 1em;*/
 }
 
 .content .row {
@@ -49,35 +39,72 @@ body {
   font-size: 2em;
 }
 
-.row.light {
-  background-color: #ddd;
-}
-
-.row.dark {
-  background-color: #333;
-  color: white;
-}
-
 .banner {
   background-color: #999;
 }
 
+.banner h2 .bold {
+  font-weight: bold;
+}
+
+.blink {
+  animation: 1.5s blink infinite;
+}
+
+.cursor {
+  display: inline-block;
+  font-weight: 100;
+  background: transparent;
+}
+
+.banner a {
+  color: white;
+}
+
+.kickstarter_button {
+  margin-top: 2em;
+  border-color: white;
+}
+
+.kickstarter_button:hover {
+  color: #333;
+  background-color: white;
+}
+
+.content .row {
+  padding: 5em 2em;
+  border-bottom: 1px solid #ddd;
+}
+
+.row h2 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+}
+
+.blurb {
+  padding: 0 3em;
+  font-size: 18px;
+  line-height: 1.6em
+}
+
 .banner h1 {
-  background-color: rgba(0, 0, 0, 0.75);
   font-size: 3em;
   font-weight: bold;
   margin-top: 2em;
-  text-align: left;
   white-space: nowrap;
 }
 .banner h2 {
-  background-color: rgba(0, 0, 0, 0.75);
   font-weight: 200;
   font-size: 1.5em;
-  text-align: left;
-  padding-left: 1.5em;
   margin-top: 0;
 }
+.banner h3 {
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
 .banner h2 .bold {
   font-weight: bold;
 }
@@ -99,13 +126,19 @@ body {
 }
 
 .community {
-  background-image: url("../images/F_fin_525.gif");
+  background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+        url("../images/F_fin_525.gif");
 }
 .gaming {
-  background-image: url("../images/L_fin_525.gif");
+  background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+        url("../images/L_fin_525.gif");
 }
 .coworking {
-  background-image: url("../images/G_fin_525.gif");
+  background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+        url("../images/G_fin_525.gif");
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -160,20 +193,15 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  /*.container {
-    max-width: 730px;
-  }*/
-
   .banner h1 {
     font-size: 6em;
   }
   .banner h2 {
     font-size: 2em;
-    padding-left: 2.5em;
   }
 
   .container {
-    max-width: 730px;
+    max-width: 960px;
   }
 
   /* Remove the padding we set earlier */
